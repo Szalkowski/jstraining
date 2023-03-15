@@ -6,6 +6,11 @@
 </head>
 <body>
 <h1>Todo App</h1>
+<select id="sort-by">
+    <option value="createdBy">Sort by created date</option>
+    <option value="updatedBy">Sort by updated date</option>
+    <option value="alphabetical">Sort alphabetically</option>
+</select>
 <input type="text" id="search-notes" placeholder="Search notes">
 <div id="notes"></div>
 <label>
@@ -16,6 +21,9 @@
     <input type="text" name="todo" placeholder="Add to do">
     <button>Create todo</button>
 </form>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"
+        integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="uuidv4.js"></script>
 <script src="todo-functions.js"></script>
 <script src="todo-app.js"></script>
