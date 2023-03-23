@@ -18,4 +18,6 @@ const startGame = async () => {
     render()
 }
 
+document.querySelector('#reset').addEventListener('click', startGame)
+
 startGame()
