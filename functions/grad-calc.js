@@ -1,4 +1,7 @@
 const gradCalc = function (score, possibleScore = 100) {
+    if (typeof score !== 'number' || typeof possibleScore !== 'number') {
+        throw Error('Please provide a number')
+    }
     const percent = score / possibleScore * 100
     let letterGrade = ''
     if (percent >= 90) {
@@ -14,5 +17,8 @@ const gradCalc = function (score, possibleScore = 100) {
     }
     return `You got ${letterGrade} (${percent})`
 }
-
-console.log(gradCalc(15, 20))
+try {
+    console.log(gradCalc(10, 20))
+} catch (e) {
+    console.log(e)
+}

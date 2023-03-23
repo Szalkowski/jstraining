@@ -1,11 +1,11 @@
 const nowTimestamp = moment().valueOf()
 const getSavedTodos = () => {
     const toDoJSON = localStorage.getItem('todo')
-
-    if (toDoJSON) {
-        return JSON.parse(toDoJSON)
+    try {
+        return toDoJSON ? JSON.parse(toDoJSON) : []
+    } catch (e) {
+        return []
     }
-    return []
 }
 
 const addTodo = (array, value) => {
